@@ -4,12 +4,16 @@ public class Lab09_YardGreening {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double price = Double.parseDouble(scanner.nextLine());
-        double priceForYard = price * 7.61;
-        double discount = priceForYard * 0.18;
-        double finalPrice = priceForYard - discount;
+        double yardArea = Double.parseDouble(scanner.nextLine());
+        double pricePerSquareMeter = 7.61;
+        double discount = 0.18;
 
-        System.out.printf("The final price is: %.2f lv.%nThe discount is: %.2f lv.", finalPrice, discount);
+        double price = yardArea * pricePerSquareMeter;
+        double priceWithDiscount = price * discount;
+        double finalPrice = price - priceWithDiscount;
+
+        System.out.printf("The final price is: %.2f lv.%n", finalPrice);
+        System.out.printf("The discount is: %.2f lv.", priceWithDiscount);
     }
 
 }
