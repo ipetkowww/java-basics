@@ -14,7 +14,7 @@ public class Lab12_TradeCommissions {
             switch (city) {
                 case "Sofia":
                     if (sales >= 0 && sales <= 500) {
-                        sales *= 0.08;
+                        sales *= 0.05;
                     } else if (sales <= 1000) {
                         sales *= 0.07;
                     } else if (sales <= 10000) {
